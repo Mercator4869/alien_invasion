@@ -29,6 +29,7 @@ class AlienInvasion:
             self.ship.update()
             self.bullets.update()
             self._update_bullets()
+            self._update_aliens()
             self._update_screen()
             self.clock.tick(60)
 
@@ -113,6 +114,14 @@ class AlienInvasion:
         for bullet in self.bullets.sprites():
             bullet.draw_bullet()
         pygame.display.flip()
+
+
+
+    def _update_aliens(self):
+        """Check if the fleet is at an edge, and then update the positions of all aliens in the fleet."""
+        self.aliens.update()
+
+
 
 
 if __name__ == '__main__':    # Make a game instance, and run the game.
