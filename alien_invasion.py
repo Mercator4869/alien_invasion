@@ -114,6 +114,7 @@ class AlienInvasion:
             # Destroy existing bullets and create new fleet.
             self.bullets.empty()
             self._create_fleet()
+            self.settings.increase_speed()
 
     def _check_bullet_alien_collisions(self):
         """Check for any bullets that have hit aliens. If so, get rid of the bullet and the alien."""
